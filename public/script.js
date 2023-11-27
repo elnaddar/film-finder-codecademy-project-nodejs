@@ -56,11 +56,15 @@ const getMovieInfo = async movie => {
 };
 
 // Gets a list of movies and ultimately displays the info of a random movie from the list
-const showRandomMovie = () => {
+const showRandomMovie = async () => {
   const movieInfo = document.getElementById('movieInfo');
   if (movieInfo.childNodes.length > 0) {
     clearCurrentMovie();
   };
+  const movies = await getMovies();
+  const randomMovie = getRandomMovie(movies);
+  const info = await getMovieInfo(randomMovie);
+  displayMovie(info);
 
 };
 
