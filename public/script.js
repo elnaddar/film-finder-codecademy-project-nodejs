@@ -1,4 +1,6 @@
-const tmdbKey = '';
+import { API_KEY } from "../env";
+
+const tmdbKey = API_KEY;
 const tmdbBaseUrl = '';
 const playBtn = document.getElementById('playBtn');
 
