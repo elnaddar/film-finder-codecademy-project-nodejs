@@ -1,11 +1,10 @@
-import { API_KEY } from "../env";
+import { API_KEY } from "../env.js";
 
 const tmdbKey = API_KEY;
 const tmdbBaseUrl = 'https://api.themoviedb.org/3';
 const playBtn = document.getElementById('playBtn');
 
 const getGenres = () => {
-
 };
 
 const getMovies = () => {
