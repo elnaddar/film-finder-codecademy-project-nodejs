@@ -10,3 +10,10 @@ On the Settings page, navigate to the API section and click on the link to Reque
 You’ll be asked to enter some personal information like your address and phone number. This is pretty common. Many APIs use this information to keep track of how their data is being used. As a part of your registration, you will also be asked to provide a URL for the site where you will be using this API. Here, you can list `"https://codecademy.com"`. Check out these [instructions](https://developers.themoviedb.org/3/getting-started/introduction) if you need further assistance with registering for an API key.
 
 After you finish this project, feel free to challenge yourself to continue building it out. For example, you might recommend TV shows instead of movies, or change the information you present about the recommended movies. The possibilities are endless. Next time you find yourself needing new content recommendations, you’ll know where to turn!
+
+## Future Work
+challenge yourself, consider the following:
+
+- Checkout the `displayMovie()`` function in helpers.js to use the DOM to rearrange the layout of information on the page. Try displaying different types of information like cast, or release date.
+- Create a way to store a user’s liked and disliked movies and display this list on the page.
+- Our API call inside of `getMovies()` returns many pages of results, but currently our program only randomizes results from the first page. To randomize our results even more, update `getMovies()` so that `movies` contains results from a random page instead of the first page.
