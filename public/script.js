@@ -2,11 +2,12 @@ import { API_KEY } from "../env.js";
 
 const tmdbKey = API_KEY;
 const tmdbBaseUrl = 'https://api.themoviedb.org/3';
+const tmdbKeyParam = `api_key=${tmdbKey}`;
 const playBtn = document.getElementById('playBtn');
 
 const getGenres = async () => {
   const genreRequestEndpoint = "/genre/movie/list";
-  const requestParams = `?api_key=${tmdbKey}`;
+  const requestParams = `?${tmdbKeyParam}`;
   const urlToFetch = tmdbBaseUrl+genreRequestEndpoint+requestParams;
   try{
     const response = await fetch(urlToFetch);
@@ -23,7 +24,7 @@ const getGenres = async () => {
 const getMovies = async () => {
   const discoverMovieEndpoint = "/discover/movie";
   const selectedGenre = getSelectedGenre();
-  const requestParams = `?api_key=${tmdbKey}&with_genres=${selectedGenre}`;
+  const requestParams = `?${tmdbKeyParam}&with_genres=${selectedGenre}`;
   const urlToFetch = tmdbBaseUrl+discoverMovieEndpoint+requestParams;
   try{
     const response = await fetch(urlToFetch);
